@@ -287,9 +287,10 @@ class EmulatedUI3DPlayer(
 
     private fun tick() {
         val ticks = ClientTickEvent.counter - tickCounter
-        repeat(ticks.coerceAtMost(20)) {
+        repeat(ticks.coerceAtMost(21)) {
             onGameTick()
         }
+        
         tickCounter += ticks
     }
 
